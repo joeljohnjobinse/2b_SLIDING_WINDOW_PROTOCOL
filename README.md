@@ -11,16 +11,6 @@ To write a Python program for the implementation of sliding window protocol
 6. Stop the Program
 
 ## PROGRAM
-### Client:
-```
-import socket
-s=socket.socket()
-s.connect(('localhost',8000))
-while True:
-  print(s.recv(1024).decode())
-s.send("acknowledgement recived from the server".encode())
-```
-
 ### Server:
 ```
 import socket
@@ -42,6 +32,17 @@ while True:
       print(ack)
       i+=s
 ```
+
+### Client:
+```
+import socket
+s=socket.socket()
+s.connect(('localhost',8000))
+while True:
+  print(s.recv(1024).decode())
+s.send("acknowledgement recived from the server".encode())
+```
+
 ## OUTPUT
 ### Server:
 ![exp2bserver](https://github.com/user-attachments/assets/dbf0b870-5fdf-429e-b0df-9f6dbb839b76)
